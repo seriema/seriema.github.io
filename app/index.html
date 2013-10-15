@@ -1,0 +1,56 @@
+---
+layout: page
+---
+
+<div class="row-fluid">
+    <div class="span4">
+        <h3>Articles WIP</h3>
+
+        <p>On this page I work on my longer articles before publishing them on my blog. It's so I can have a version-controlled public edition of the article while it's work-in-progress.</p>
+
+        <ul>
+            <li><a href="{% post_url 2013-07-03-components-1 %}">Components - part 1</a></li>
+            <li><a href="{% post_url 2013-07-04-components-2 %}">Components - part 2</a></li>
+            <li><a href="{% post_url 2013-07-05-components-3 %}">Components - part 3</a></li>
+            <li><a href="{% post_url 2013-07-06-components-4 %}">Components - part 4</a></li>
+            <li><a href="{% post_url 2013-07-07-components-5 %}">Components - part 5</a></li>
+            <li><a href="{% post_url 2013-07-13-the-jp-test %}">The JP Test</a></li>
+        </ul>
+    </div>
+    <div class="span4">
+        <h3>Talks</h3>
+
+        <ul>
+            <li>Verifying fun</li>
+            <li>Teaching students UX in a weekend?</li>
+            <li>Web development</li>
+            <li>Yeoman workflow</li>
+            <li>Wireframed</li>
+        </ul>
+    </div>
+    <div class="span4">
+        <h3>Online</h3>
+        {% capture profiles %}
+        {% include profiles.md %}
+        {% endcapture %}
+        {{ profiles | unindent | markdownify }}
+    </div>
+</div>
+
+
+<div class="row-fluid">
+    <div class="span4">
+        <h3>Read books</h3>
+        {% capture books %}
+            {% include books.md %}
+        {% endcapture %}
+        {{ books | unindent | markdownify }}
+    </div>
+    <div class="span8">
+        <h3>Repos</h3>
+        {% capture repos %}
+            {% include repos.md %}
+        {% endcapture %}
+        {{ repos | unindent | markdownify }}
+    </div>
+</div>
