@@ -3,9 +3,9 @@
     "version": "0.1.0",
     "dependencies": {
         "modernizr": "~2.6.2",
-        "jquery": "~2.0.0",
-        "font-awesome": "~3.1.1",
+        "jquery": "~2.0.3",
+        "font-awesome": "~3.2.1",
         "bootstrap": "~3.0.0",
-        "normalize-css": "~2.1.2"
+        "normalize-css": "~2.1.3"
     }
 }
