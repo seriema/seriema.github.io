@@ -1,7 +1,6 @@
 // Generated on 2013-06-17 using generator-jekyll 0.1.0
 'use strict';
 
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
@@ -28,9 +27,12 @@ module.exports = function (grunt) {
         watch: {
             recess: {
                 files: ['<%= yeoman.app %>/assets/styles/{,*/}*.less'],
-                tasks: ['recess']
+                tasks: ['recess'],
+                options: {
+                    livereload: '<%= connect.options.port %>'
+                }
             },
-            livereload: {
+            jekyll: {
                 files: [
                     '<%= yeoman.app %>/_posts/*.md',
                     '<%= yeoman.app %>/{,*/}*.{html,md}',
@@ -38,7 +40,10 @@ module.exports = function (grunt) {
                     '{.tmp,<%= yeoman.app %>}/assets/scripts/{,*/}*.js',
                     '<%= yeoman.app %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ],
-                tasks: ['jekyll', 'livereload']
+                tasks: ['jekyll'],
+                options: {
+                    livereload: '<%= connect.options.port %>'
+                }
             }
         },
         connect: {
@@ -51,7 +56,7 @@ module.exports = function (grunt) {
                 options: {
                     middleware: function (connect) {
                         return [
-                            lrSnippet,
+                            require('connect-livereload')(),
                             mountFolder(connect, '.tmp'),
                             mountFolder(connect, '_site')
                         ];
@@ -264,7 +269,6 @@ module.exports = function (grunt) {
             'recess',
             'copy:server',
             'jekyll',
-            'livereload-start',
             'connect:livereload',
             'open',
             'watch'
