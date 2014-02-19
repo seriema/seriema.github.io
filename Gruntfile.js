@@ -294,7 +294,9 @@ module.exports = function (grunt) {
 	  options: {
 	    base: 'dist',
         branch: 'master',
-        dotfiles: true
+        dotfiles: true,
+        message: 'Auto-commit. Check "dev" branch for source.',
+        tag: 'Published'
 	  },
 	  src: ['**']
 	},
