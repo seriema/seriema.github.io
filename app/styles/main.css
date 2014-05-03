@@ -31,3 +31,8 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Bootswatch override */
+a:hover, a:focus {
+    color: #C8C8C8;
+}
