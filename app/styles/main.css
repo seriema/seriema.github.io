@@ -40,6 +40,7 @@ body {
 }
 
 /* Bootswatch override */
+/* Disable this for now. I'm using a mix of icon images and fonts so hover doesn't work correctly.
 a:hover, a:focus {
     color: #C8C8C8;
-}
+}*/
