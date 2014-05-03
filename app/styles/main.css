@@ -32,6 +32,13 @@ body {
   }
 }
 
+.img-icon {
+    max-width: 45px;
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
 /* Bootswatch override */
 a:hover, a:focus {
     color: #C8C8C8;
