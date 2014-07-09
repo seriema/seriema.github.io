@@ -253,8 +253,8 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-			'CNAME',
-			'.nojekyll',
+						'CNAME',
+						'.nojekyll',
             '*.html',
             'views/{,*/}*.html',
             'bower_components/**/*',
@@ -291,17 +291,17 @@ module.exports = function (grunt) {
       ]
     },
 
-	// Github page upload
+		// Github page upload
     'gh-pages': {
-	  options: {
-	    base: 'dist',
-        branch: 'master',
-        dotfiles: true,
-        message: 'Auto-commit. Check "dev" branch for source.',
-        tag: 'Published'
-	  },
-	  src: ['**']
-	},
+			options: {
+				base: 'dist',
+				branch: 'master',
+				dotfiles: true,
+				message: 'Auto-commit. Check "dev" branch for source.',
+				tag: 'Published'
+			},
+			src: ['**']
+		},
 
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
