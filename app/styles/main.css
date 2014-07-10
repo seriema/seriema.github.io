@@ -39,6 +39,14 @@ body {
     margin-bottom: 15px;
 }
 
+.jumbotron {
+    font-size: 21px; /* missing in bootswatch */
+}
+
+.jumbotron .col-xs-2 {
+    height: 50px; /* unsure why this is needed */
+}
+
 /* Bootswatch override */
 /* Disable this for now. I'm using a mix of icon images and fonts so hover doesn't work correctly.
 a:hover, a:focus {
