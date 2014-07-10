@@ -22,7 +22,8 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
+      dist: 'dist',
+			tmp: '.tmp'
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -147,10 +148,6 @@ module.exports = function (grunt) {
       }
     },
 
-
-
-
-
     // Renames files for browser caching purposes
     rev: {
       dist: {
@@ -159,7 +156,7 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
             '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/styles/fonts/*'
+            '<%= yeoman.dist %>/fonts/*'
           ]
         }
       }
@@ -291,6 +288,14 @@ module.exports = function (grunt) {
       ]
     },
 
+		uncss: {
+			dist: {
+				files: {
+					'<%= yeoman.dist %>/styles/tidy.css': ['app/index.html']
+				}
+			}
+		},
+
 		// Github page upload
     'gh-pages': {
 			options: {
@@ -306,16 +311,26 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= yeoman.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+			uncss: {
+				files: {
+					'<%= yeoman.dist %>/styles/tidy.css': [
+						'<%= yeoman.dist %>/styles/tidy.css'
+					]
+				},
+				options: {
+					keepSpecialComments: 0
+				}
+			}
+//      dist: {
+//        files: {
+//          '<%= yeoman.dist %>/styles/main.css': [
+//            '.tmp/styles/{,*/}*.css',
+//            '<%= yeoman.app %>/styles/{,*/}*.css'
+//          ]
+//        }
+//      }
+    },
     // uglify: {
     //   dist: {
     //     files: {
@@ -372,21 +387,23 @@ module.exports = function (grunt) {
     'bower-install',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
-    'concat',
-    'ngmin',
+//    'autoprefixer',
+//    'concat',
+//		'ngmin',
+		'uncss',
     'copy:dist',
-    'cdnify',
-    'cssmin',
-    'uglify',
-    'rev',
+//    'cdnify',
+		'cssmin',
+//    'uglify',
+//		'rev',
     'usemin',
-    'htmlmin'
-  ]);
+		'cssmin:uncss',
+		'htmlmin'
+	]);
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
+//    'test',
     'build'
   ]);
 
