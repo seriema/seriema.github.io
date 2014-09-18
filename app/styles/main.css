@@ -18,27 +18,11 @@ body {
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
-.img-icon {
-    max-width: 45px;
-    display: inline-block;
-    line-height: 1;
-    margin-bottom: 15px;
-}
-
 .jumbotron {
     font-size: 21px; /* missing in bootswatch */
 }
 
 .jumbotron .col-xs-2 {
-    height: 50px; /* unsure why this is needed */
 }
 
 /* Bootswatch override */
