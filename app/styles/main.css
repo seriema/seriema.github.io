@@ -18,15 +18,14 @@ body {
   }
 }
 
-.jumbotron {
-    font-size: 21px; /* missing in bootswatch */
-}
-
 .jumbotron .icon {
     margin-top: 20px;
 }
 
-/* Bootswatch override */
+/* missing in bootswatch */
+.jumbotron {
+    font-size: 21px;
+}
 a:hover, a:focus {
     color: #C8C8C8;
 }
