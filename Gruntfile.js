@@ -291,7 +291,7 @@ module.exports = function (grunt) {
 		uncss: {
 			dist: {
 				files: {
-					'<%= yeoman.dist %>/styles/tidy.css': ['app/index.html', 'app/new.html', 'app/new2.html']
+					'<%= yeoman.dist %>/styles/tidy.css': ['app/*.html']
 				}
 			}
 		},
