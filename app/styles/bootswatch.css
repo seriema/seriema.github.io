@@ -1136,7 +1136,7 @@ mark,
     text-transform: capitalize;
 }
 .text-muted {
-    color: #7a8288;
+    color: #8c9297;
 }
 .text-primary {
     color: #7a8288;
@@ -1283,7 +1283,7 @@ blockquote .small {
     display: block;
     font-size: 80%;
     line-height: 1.42857143;
-    color: #7a8288;
+    color: #999a9b;
 }
 blockquote footer:before,
 blockquote small:before,
@@ -5136,7 +5136,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading {
     color: #c8c8c8;
-    background-color: #4a9fb8;
+    background-color: #3e444c;
     border-color: rgba(0, 0, 0, 0.6);
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
@@ -5190,7 +5190,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-info > .panel-heading {
     color: #ffffff;
-    background-color: #5bc0de;
+    background-color: #4a9fb8;
     border-color: rgba(0, 0, 0, 0.6);
 }
 .panel-info > .panel-heading + .panel-collapse > .panel-body {
