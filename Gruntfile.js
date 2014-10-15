@@ -344,6 +344,17 @@ module.exports = function (grunt) {
     //   dist: {}
     // },
 
+		smoosher: {
+			options: {
+//				cssDir: '../'
+			},
+			all: {
+				files: {
+					'<%= yeoman.dist %>/index.html': '<%= yeoman.dist %>/index.html'
+				}
+			}
+		},
+
     // Test settings
     karma: {
       unit: {
@@ -398,6 +409,7 @@ module.exports = function (grunt) {
 //		'rev',
     'usemin',
 		'cssmin:uncss',
+		'smoosher',
 		'htmlmin'
 	]);
 
