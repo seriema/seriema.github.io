@@ -253,8 +253,6 @@ module.exports = function (grunt) {
 						'CNAME',
 						'.nojekyll',
             '*.html',
-            'views/{,*/}*.html',
-            'bower_components/**/*',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
