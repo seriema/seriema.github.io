@@ -1,12 +1,6 @@
 {
   "name": "seriemagithubio",
   "version": "0.2.1",
-  "dependencies": {
-    "json3": "~3.2.6",
-    "es5-shim": "~2.1.0"
-  },
-  "devDependencies": {
-    "angular-mocks": "1.2.6",
-    "angular-scenario": "1.2.6"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
