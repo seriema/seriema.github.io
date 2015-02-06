@@ -11,15 +11,32 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-
+/* Override jumbotron */
+.jumbotron a {
+  color: #fff;
+  opacity: 1;
+  transition-property: opacity, transform;
+  transition-duration: 0.3s;
+}
+.jumbotron a:focus,
+.jumbotron a:hover {
+  opacity: 0.5;
+  transform: scale(1.4);
+}
 .jumbotron .icon {
     margin-top: 20px;
+}
+
+/* Feedback from Joel */
+.panel-heading {
+  padding: 20px 15px;
+}
+.panel-title {
+  text-align: center;
+  font-size: 32px;
 }
 
 /* missing in bootswatch */
 .jumbotron {
     font-size: 21px;
-}
-a:hover, a:focus {
-    color: #C8C8C8;
 }
