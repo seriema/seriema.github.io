@@ -24,13 +24,11 @@ body {
   margin: 20px 0 5px 0;
   display: block;
 
-  opacity: 1;
-  transition-property: opacity, transform;
+  transition-property: transform;
   transition-duration: 0.3s;
 }
 .jumbotron a:focus .icon,
 .jumbotron a:hover .icon {
-  opacity: 0.5;
   -ms-transform: scale(1.4);
   -webkit-transform: scale(1.4);
   transform: scale(1.4);
@@ -46,7 +44,7 @@ body {
 }
 .jumbotron a:focus span,
 .jumbotron a:hover span {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
