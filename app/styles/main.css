@@ -14,18 +14,44 @@ body {
 /* Override jumbotron */
 .jumbotron a {
   color: #fff;
+}
+.jumbotron a:focus,
+.jumbotron a:hover {
+  text-decoration: none;
+}
+
+.jumbotron a .icon {
+  margin: 20px 0 5px 0;
+  display: block;
+
   opacity: 1;
   transition-property: opacity, transform;
   transition-duration: 0.3s;
 }
-.jumbotron a:focus,
-.jumbotron a:hover {
+.jumbotron a:focus .icon,
+.jumbotron a:hover .icon {
   opacity: 0.5;
   -webkit-transform: scale(1.4);
   transform: scale(1.4);
 }
-.jumbotron .icon {
-    margin-top: 20px;
+
+.jumbotron a span {
+  font-size: 16px;
+  margin: 0 -30px; /* give the text some extra space to center */
+
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+.jumbotron a:focus span,
+.jumbotron a:hover span {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding: 20px 0;
+  }
 }
 
 /* Feedback from Joel */
@@ -61,4 +87,9 @@ body {
 .row-flex > [class*='col-'] {
   flex: 0 1 auto;
   margin: -1px; /* hack adjust for wrapping */
+}
+
+/* Hacks :( */
+.jumbotron a .icon-linkedin-square { /* TODO: Need to fix the icon */
+  margin-left: 7px;
 }
