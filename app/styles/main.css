@@ -21,6 +21,7 @@ body {
 .jumbotron a:focus,
 .jumbotron a:hover {
   opacity: 0.5;
+  -webkit-transform: scale(1.4);
   transform: scale(1.4);
 }
 .jumbotron .icon {
