@@ -40,3 +40,24 @@ body {
 .jumbotron {
     font-size: 21px;
 }
+
+
+/* Simple flexbox, borrowed from http://www.bootply.com/126437 */
+.row-flex,
+.row-flex > [class*='col-'] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.row-flex-wrap {
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  flex: 0;
+}
+.row-flex > [class*='col-'] {
+  flex: 0 1 auto;
+  margin: -1px; /* hack adjust for wrapping */
+}
