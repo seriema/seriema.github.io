@@ -69,14 +69,14 @@
       </header>
 
       <main role="main">
-        <article class="row" itemscope itemtype="http://data-vocabulary.org/Person">
+        <article class="row" itemscope itemtype="http://schema.org/Person">
           <div class="col-xs-8 col-md-6 col-md-offset-2 lead">
-            <p>My name is <span itemprop="name (fn)">John-Philip</span> "<span itemprop="nickname">JP</span>" Johansson. I live in <span itemprop="region">Stockholm</span>, <span itemprop="country-name">Sweden</span>, and I love UX.</p>
+            <p>My name is <span itemprop="name"><span itemprop="givenName">John-Philip</span> "<span itemprop="alternateName">JP</span>" <span itemprop="familyName">Johansson</span></span>. I live in <span itemprop="homeLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Stockholm</span> (<span itemprop="addressCountry">Sweden</span>)</span></span>, and work as a <span itemprop="jobTitle">UX developer</span>.</p>
             <p>Developing solutions is a wonderful thing and I want to spread that love. So I donate monthly to <a href="http://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>, <a href="https://www.khanacademy.org/">Khan Academy</a>, <a href="https://www.eff.org/">EFF</a>, <a href="https://archive.org/">the Internet Archive</a>, and <a href="http://www.kiva.org/invitedby/seriema">Kiva</a>.</p>
             <p>I have <em>six</em> main passions in life (not counting people):</p>
           </div>
           <div class="col-xs-4 col-md-2">
-            <img itemprop="photo" src="images/jupiter.png" width="157" height="200" class="img-responsive img-rounded center-block" alt="Drawing of me" />
+            <img itemprop="image" src="images/jupiter.png" width="157" height="200" class="img-responsive img-rounded center-block" alt="Drawing of me" />
           </div>
         </article>
 
