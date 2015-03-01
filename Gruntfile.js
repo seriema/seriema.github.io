@@ -261,6 +261,11 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/images/favicons',
+          dest: '<%= yeoman.dist %>/images/favicons',
+          src: ['browserconfig.xml', 'manifest.json']
         }]
       },
       styles: {
