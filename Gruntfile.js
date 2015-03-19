@@ -254,7 +254,8 @@ module.exports = function (grunt) {
 						'.nojekyll',
             '*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'files/*'
           ]
         }, {
           expand: true,
