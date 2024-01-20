@@ -22,15 +22,28 @@
         transform: scale(1.5);
       }
 
-      .card-title {
-        -webkit-text-stroke: 1px rgb(105, 105, 105);
-        color: white;
+      .card .card-title {
+        -webkit-text-stroke: 1px rgba(10, 12, 43, 0.5);
+        transition: transform 0.5s ease;
+      }
+      .card:hover .card-title {
+        -webkit-text-stroke: 1px rgba(10, 12, 43, 0.7);
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="row my-3"></div>
+
+      <div class="row my-3">
+        <div class="col">
+          <h1>Portfolio</h1>
+          <p class="lead">
+            This is a small selection of the projects that brought joy to me and
+            people it affected.
+          </p>
+        </div>
+      </div>
 
       <div class="row align-items-center gx-3 gy-3">
         <div class="col-lg-4 col-md-12">
@@ -54,7 +67,7 @@
               alt="Splash screen of the video game Mirror's Edge 2008 featuring the main character in profile"
             />
             <div class="card-img-overlay">
-              <h5 class="card-title">Mirror's Edge (2008)</h5>
+              <h5 class="card-title">Mirror's Edge</h5>
             </div>
           </div>
         </div>
@@ -75,19 +88,6 @@
         <div class="col-lg-4 col-md-12">
           <div class="card text-bg-dark ratio ratio-16x9">
             <img
-              src="img/episerver-cms-ui.png"
-              class="card-img"
-              alt="Comparison screenshot of Episerver CMS UI before and after UI Art refresh"
-            />
-            <div class="card-img-overlay">
-              <h5 class="card-title">Episerver CMS UI</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-12">
-          <div class="card text-bg-dark ratio ratio-16x9">
-            <img
               src="img/turbo-loader.jpeg"
               class="card-img"
               alt="photo of a SNES joycon and some cables"
@@ -101,12 +101,64 @@
         <div class="col-lg-4 col-md-12">
           <div class="card text-bg-dark ratio ratio-16x9">
             <img
+              src="img/swedish-game-awards.png"
+              class="card-img"
+              alt="Logo of the Swedish Game Awards, which is a stylized green cube made of spheres in a molecule structure"
+            />
+            <div class="card-img-overlay">
+              <h5 class="card-title">Swedish Game Awards</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <div class="card text-bg-dark ratio ratio-16x9">
+            <img
+              src="img/spotify-screensaver.png"
+              class="card-img"
+              alt="Photo from a hackathon of my Spotify Screensaver app"
+            />
+            <div class="card-img-overlay">
+              <h5 class="card-title">Spotify Screensaver</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <div class="card text-bg-dark ratio ratio-16x9">
+            <img
+              src="img/thumbview.gif"
+              class="card-img"
+              alt="Screenshot of Windows Explorer with some image thumbnails"
+            />
+            <div class="card-img-overlay">
+              <h5 class="card-title text-dark">Thumbview</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <div class="card text-bg-dark ratio ratio-16x9">
+            <img
+              src="img/episerver-cms-ui.png"
+              class="card-img"
+              alt="Comparison screenshot of Episerver CMS UI before and after UI Art refresh"
+            />
+            <div class="card-img-overlay">
+              <h5 class="card-title text-dark">Episerver CMS UI</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <div class="card text-bg-dark ratio ratio-16x9">
+            <img
               src="img/bmw-configurator.png"
               class="card-img"
               alt="Photo of a Windows tablet with the BMW Car Configurator app"
             />
             <div class="card-img-overlay">
-              <h5 class="card-title">BMW Configurator</h5>
+              <h5 class="card-title text-dark">BMW Configurator</h5>
             </div>
           </div>
         </div>
