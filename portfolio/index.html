@@ -23,11 +23,19 @@
       }
 
       .card .card-title {
-        -webkit-text-stroke: 1px rgba(10, 12, 43, 0.5);
+        text-shadow: rgba(10, 12, 43, 0.5) 0 0 10px;
         transition: transform 0.5s ease;
       }
       .card:hover .card-title {
-        -webkit-text-stroke: 1px rgba(10, 12, 43, 0.7);
+        text-shadow: rgba(10, 12, 43, 0.7) 0 0 10px;
+      }
+
+      .card .card-title.text-dark {
+        text-shadow: rgba(211, 213, 243, 0.7) 0 0 5px;
+        transition: transform 0.5s ease;
+      }
+      .card:hover .card-title.text-dark {
+        text-shadow: rgba(211, 213, 243, 0.9) 0 0 10px;
       }
     </style>
   </head>
